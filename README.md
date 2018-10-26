@@ -1,6 +1,6 @@
 # Bicing scrapper (prototype)
 
-The goal of this project is to scrap data from the Barcelona Bicing API to create a historical dataset. The *master* branch consists on a prototype contained in a **Jupyter Notebook**.
+The goal of this project is to scrap data from the Barcelona **Bicing** API to create a historical dataset. The *master* branch consists on a prototype contained in a **Jupyter Notebook**.
 
 The prototype reads data from the Bicing API and save them in CSV files:
 
