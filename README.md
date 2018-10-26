@@ -1,11 +1,13 @@
-# bicing scrapper (prototype)
+# Bicing scrapper (prototype)
 
-Reads data from the bicing API and saves it in CSV files:
+The goal of this project is to scrap data from the Barcelona **Bicing** API to create a historical dataset. The *master* branch consists on a prototype contained in a **Jupyter Notebook**.
 
-- One single CSV file storing information about the stations.
-- One CSV file for each station containing the information updated every minute.
+The prototype reads data from the Bicing API and save them in CSV files:
 
-The prototype is coded in a **Jupyter Notebook**.
+ * One single CSV file storing information about the stations.
+ * One CSV file for each station containing the information updated every minute.
+
+The *node* branch of the repository contains the code run in production (https://github.com/dacfortuny/bicing/tree/node).
 
 ## Configuration parameters
  * `BICING_URL`: URL of the bicing API.
@@ -23,7 +25,7 @@ STATIONS_FILE = "output/stations.csv"
 
 In the stations file:
 
- * **internalId**: Internal ID, different for each station and for each version of each station (considering different versions those in which one of the following fiels differs from the former one: *id*, *type*, *streetName*, *streetNum*, *latitude*, *longitude*, *altitude*, *nearbyStations*. This corresponds with the name of the data file for each station.
+ * **internalId**: Internal ID, different for each station and for each version of each station (considering different versions those in which one of the following fiels differs from the former one: *id*, *type*, *latitude*, *longitude* and *altitude*. This corresponds with the name of the data file for each station.
  * **id**: Official id of the station.
  * **type**: Whether the bikes in the station are mechanical (**BIKE**) or electric (**BIKE-ELECTRIC**).
  * **streetName**: Street in which the station is located.
@@ -31,7 +33,6 @@ In the stations file:
  * **latitude**: Latitude of the station.
  * **longitude**: Longitude of the station.
  * **altitude**: Altitude of the station in meters.
- * **nearbyStations**: Closer stations. These may change if one of them is closed.
  
  In each of the data files, for which the name is the *internalId* found in the stations file:
  
@@ -39,3 +40,4 @@ In the stations file:
  * **status**: Whether the station is open (**OPN**) or closed (**CLS**).
  * **bikes**: Number of available working bikes.
  * **slots**: Number of working slots.
+ * **nearbyStations**: Closer open stations.
