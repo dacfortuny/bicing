@@ -7,7 +7,7 @@ The prototype reads data from the Bicing API and save them in CSV files:
  * One single CSV file storing information about the stations.
  * One CSV file for each station containing the information updated every minute.
 
-The *node* branch of the repository contains the code run in production (https://github.com/dacfortuny/bicing/tree/node).
+There is a [sister project](https://github.com/prodrigestivill/bicing-scrapper) that contains the code run in production.
 
 ## Configuration parameters
  * `BICING_URL`: URL of the bicing API.
